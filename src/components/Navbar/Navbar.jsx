@@ -11,7 +11,7 @@ function Navbar() {
         <li><a href="#" className="hover:underline">Doctors</a></li>
         <li><a href="#" className="hover:underline">Contacts</a></li>
         <li>
-          <button className="bg-[#BFD2F8] text-[#1F2B6C] flex items-center gap-2 rounded-full px-6 py-2 cursor-pointer hover:bg-[#a8c0f0] transition">
+          <button className="bg-[#BFD2F8] font-semibold text-[#1F2B6C] flex items-center gap-2 rounded-full px-6 py-2 cursor-pointer hover:bg-[#a8c0f0] transition">
             <IoIosSearch /> Appointment
           </button>
         </li>
