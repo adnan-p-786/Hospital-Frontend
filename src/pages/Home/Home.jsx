@@ -7,7 +7,8 @@ import logo from '../../assets/Vector.png'
 import jen from '../../assets/1.png'
 import jon from '../../assets/2.png'
 import jeen from '../../assets/3.png'
-import news from '../../assets/Rectangle 34.png'
+import medical from '../../assets/medical 1.png'
+import news from '../../assets/rectangle 34.png';
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -31,7 +32,7 @@ function Home() {
           <div>
             <h1 className='text-[#159EEC] font-bold text-xl tracking-widest'>CARING FOR LIFE</h1>
             <h1 className='text-5xl text-[#1F2B6C] tracking-wide leading-14'>Leading the Way <br /> in Medical Excellence </h1>
-            <button className='text-[#1F2B6C] font-semibold bg-[#BFD2F8] mt-5 px-7 py-1.5 rounded-full'>Our Services</button>
+            <button className='text-[#1F2B6C] font-semibold bg-[#BFD2F8] mt-5 px-7 py-1.5 rounded-full cursor-pointer'>Our Services</button>
           </div>
         </div>
       </div>
@@ -42,7 +43,7 @@ function Home() {
             <h1 className='text-[#159EEC] tracking-[3px] font-bold'>WELCOME TO MEDDICAL</h1>
             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>A Great Place to Receive Care</h1>
             <p className='mt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit.njldknjeklne enknekone kneknek Cumque vero facilis <br /> doloribus nostrum accusamus vel incidunt, esse eum fugit illum, brminus quos porro at impedit totam repellat cupiditate expedita. Ratione.</p>
-            <a class="text-[#159EEC] mt-5 inline-flex items-center">Learn More
+            <a class="text-[#159EEC] mt-5 inline-flex items-center cursor-pointer">Learn More
               <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
@@ -57,18 +58,29 @@ function Home() {
       </div>
 
       <div className='h-screen w-full flex items-center justify-center'>
-        <div className='w-[80%] h-screen flex'>
+        <div className='w-[80%] h-screen flex mt-20'>
           <div className='text-center w-full '>
             <h1 className='text-[#159EEC] font-bold text-xl tracking-widest uppercase'>Care you can believe in</h1>
             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Our Services</h1>
-
+            <div className="grid grid-cols-3 mt-8 w-full">
+              <div className='bg-amber-100 h-full w-[25%] p-4'>
+                <img src={medical} alt="" />
+                <p>Free</p>
+              </div>
+              <div className='bg-amber-100 h-full w-[50%]'>
+                ssss
+              </div>
+              <div className='bg-amber-100 h-full w-[25]'>
+                sss
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className='h-screen w-full flex items-center justify-center'>
         <div className='w-[80%] h-screen flex'>
-          <div className='text-center w-full mt-10'>
+          <div className='text-center w-full mt-20'>
             <h1 className='text-[#159EEC] font-bold text-xl tracking-widest uppercase'>Always Caring</h1>
             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Our Specialities</h1>
             <div className="grid grid-cols-4 p-8 bg-white mt-15">
@@ -154,9 +166,9 @@ function Home() {
                   <h1 className='pt-6 tracking-wider'>John</h1>
                   <h1 className='uppercase font-bold tracking-widest'>Neurology</h1>
                   <div className='flex items-center justify-center gap-6 mt-4'>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaLinkedinIn /></div>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaFacebookF /></div>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaInstagram /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaLinkedinIn /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaFacebookF /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaInstagram /></div>
                   </div>
                   <div className='flex items-center justify-center mt-4'>
                     <button className='bg-[#1F2B6C] w-full text-[#BFD2F8] h-[46px] rounded-b-sm'>View Profile</button>
@@ -169,9 +181,9 @@ function Home() {
                   <h1 className='pt-6 tracking-wider'>Thomas</h1>
                   <h1 className='uppercase font-bold tracking-widest'>Neurology</h1>
                   <div className='flex items-center justify-center gap-6 mt-4'>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaLinkedinIn /></div>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaFacebookF /></div>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaInstagram /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaLinkedinIn /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaFacebookF /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaInstagram /></div>
                   </div>
                   <div className='flex items-center justify-center mt-4'>
                     <button className='bg-[#1F2B6C] w-full text-[#BFD2F8] h-[46px] rounded-b-sm'>View Profile</button>
@@ -184,9 +196,9 @@ function Home() {
                   <h1 className='pt-6 tracking-wider'>Leena</h1>
                   <h1 className='uppercase font-bold tracking-widest'>Neurology</h1>
                   <div className='flex items-center justify-center gap-6 mt-4'>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaLinkedinIn /></div>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaFacebookF /></div>
-                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex'><FaInstagram /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaLinkedinIn /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaFacebookF /></div>
+                    <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full items-center justify-center flex cursor-pointer'><FaInstagram /></div>
                   </div>
                   <div className='flex items-center justify-center mt-4'>
                     <button className='bg-[#1F2B6C] w-full text-[#BFD2F8] h-[46px] rounded-b-sm'>View Profile</button>
