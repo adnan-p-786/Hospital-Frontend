@@ -15,6 +15,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { GoClock } from "react-icons/go";
 import { MdOutlineMailOutline } from "react-icons/md";
+import Footer from '../../components/Footer/Footer'
 
 const categories = [
   "Neurology", "Bones", "Oncology", "Otorhinolaryngology",
@@ -291,7 +292,8 @@ function Home() {
           </div>
         </div>
       </div>
-      
+
+
     </div>
   )
 }
