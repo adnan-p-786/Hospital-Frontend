@@ -172,7 +172,7 @@ function Home() {
       </div>
 
       <div className='h-[900px] w-full flex items-center justify-center'>
-        <div className='w-[70%] h-[700px] flex'>
+        <div className='w-[95%] md:w-[70%] h-[700px] flex'>
           <div className='text-center w-full mt-15'>
             <h1 className='text-[#159EEC] font-bold text-xl tracking-widest uppercase'>trusted care</h1>
             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Our Doctors</h1>
