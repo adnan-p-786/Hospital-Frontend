@@ -1,6 +1,7 @@
 import React from 'react'
 import sub from '../../assets/SubHead.png'
 import pti from '../../assets/pti.png'
+import lok from '../../assets/lok.png'
 import { GoClock } from 'react-icons/go'
 import { MdOutlineMailOutline } from 'react-icons/md'
 import { CiLocationOn } from 'react-icons/ci'
@@ -11,7 +12,7 @@ function Service() {
         <div>
             <div className="w-full h-[250px] bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${sub})`, }}>
                 <div className='ml-23 md:ml-35'>
-                    <h1 className='text-[#1F2B6C] text-5xl md:text-7xl pt-40 md:pt-25'>Our Servicre</h1>
+                    <h1 className='text-[#1F2B6C] text-5xl md:text-7xl pt-40 md:pt-25'>Our Service</h1>
                 </div>
             </div>
 
@@ -21,6 +22,7 @@ function Service() {
                         <div className='grid grid-cols-2 md:grid-cols-3 gap-3 gap-y-3'>
                             <div className='rounded-md border-1 border-gray-100 shadow-sm w-[180px] h-[420px] md:w-[317px] md:h-[552px]'>
                                 <img className='w-full' src={pti} alt="" />
+                               
                                 <div className='p-4 mt-4'>
                                     <h1 className='text-md md:text-2xl tracking-wider text-[#1F2B6C] font-semibold'>Free Checkup</h1>
                                     <p className='text-[12px] mt-2 md:mt-3'>Lorem ipsum dolor sit amet consectetur, enim laborum quisquam necessitatibus ratione? Nemo omnis quam minima quisquam nostrum odit aliquid earum eum.</p>
@@ -32,8 +34,9 @@ function Service() {
                                     </a>
                                 </div>
                             </div>
-                            <div className='rounded-md border-1 border-gray-100 shadow-sm w-[180px] h-[420px] md:w-[317px] md:h-[552px]'>
+                            <div className='rounded-md border-1  border-gray-100 shadow-sm w-[180px] h-[420px] md:w-[317px] md:h-[552px] relative'>
                                 <img className='w-full' src={pti} alt="" />
+                                 <div className='bg-[#1F2B6C] md:h-[80px] h-[65px] w-[65px] top-34 ml-22 md:ml-[190px] md:top-65 md:w-[80px] rounded-full flex items-center justify-center absolute'><img src={lok} alt="" /></div>
                                 <div className='p-4 mt-4'>
                                     <h1 className='text-md md:text-2xl tracking-wider text-[#1F2B6C] font-semibold'>Free Checkup</h1>
                                     <p className='text-[12px] mt-2 md:mt-3'>Lorem ipsum dolor sit amet consectetur, enim laborum quisquam necessitatibus ratione? Nemo omnis quam minima quisquam nostrum odit aliquid earum eum.</p>
@@ -45,8 +48,9 @@ function Service() {
                                     </a>
                                 </div>
                             </div>
-                            <div className='rounded-md border-1 border-gray-100 shadow-sm w-[180px] h-[420px] md:w-[317px] md:h-[552px]'>
+                            <div className='rounded-md border-1 border-gray-100 shadow-sm w-[180px] h-[420px] md:w-[317px] md:h-[552px] relative'>
                                 <img className='w-full' src={pti} alt="" />
+                                <div className='bg-[#1F2B6C] md:h-[80px] h-[65px] w-[65px] top-34 ml-22 md:ml-[190px] md:top-65 md:w-[80px] rounded-full flex items-center justify-center absolute'><img src={lok} alt="" /></div>
                                 <div className='p-4 mt-4'>
                                     <h1 className='text-md md:text-2xl tracking-wider text-[#1F2B6C] font-semibold'>Free Checkup</h1>
                                     <p className='text-[12px] mt-2 md:mt-3'>Lorem ipsum dolor sit amet consectetur, enim laborum quisquam necessitatibus ratione? Nemo omnis quam minima quisquam nostrum odit aliquid earum eum.</p>
@@ -58,8 +62,9 @@ function Service() {
                                     </a>
                                 </div>
                             </div>
-                            <div className='rounded-md border-1 border-gray-100 shadow-sm w-[180px] h-[420px] md:w-[317px] md:h-[552px]'>
+                            <div className='rounded-md border-1 border-gray-100 shadow-sm w-[180px] h-[420px] md:w-[317px] md:h-[552px] relative'>
                                 <img className='w-full' src={pti} alt="" />
+                                <div className='bg-[#1F2B6C] md:h-[80px] h-[65px] w-[65px] top-34 ml-22 md:ml-[190px] md:top-65 md:w-[80px] rounded-full flex items-center justify-center absolute'><img src={lok} alt="" /></div>
                                 <div className='p-4 mt-4'>
                                     <h1 className='text-md md:text-2xl tracking-wider text-[#1F2B6C] font-semibold'>Free Checkup</h1>
                                     <p className='text-[12px] mt-2 md:mt-3'>Lorem ipsum dolor sit amet consectetur, enim laborum quisquam necessitatibus ratione? Nemo omnis quam minima quisquam nostrum odit aliquid earum eum.</p>
@@ -71,8 +76,9 @@ function Service() {
                                     </a>
                                 </div>
                             </div>
-                            <div className='hidden md:block rounded-md border-1 border-gray-100 shadow-sm w-[317px] h-[552px]'>
+                            <div className='hidden md:block rounded-md border-1 border-gray-100 shadow-sm w-[317px] h-[552px] relative'>
                                 <img className='w-full' src={pti} alt="" />
+                                <div className='bg-[#1F2B6C] h-[80px] ml-[190px] top-65 w-[80px] rounded-full flex items-center justify-center absolute'><img src={lok} alt="" /></div>
                                 <div className='p-4 mt-4'>
                                     <h1 className='text-2xl tracking-wider text-[#1F2B6C] font-semibold'>Free Checkup</h1>
                                     <p className='mt-3'>Lorem ipsum dolor sit amet consectetur, enim laborum quisquam necessitatibus ratione? Nemo omnis quam minima quisquam nostrum odit aliquid earum eum.</p>
@@ -84,8 +90,9 @@ function Service() {
                                     </a>
                                 </div>
                             </div>
-                            <div className='hidden md:block  rounded-md border-1 border-gray-100 shadow-sm w-[317px] h-[552px]'>
+                            <div className='hidden  md:block  rounded-md border-1 border-gray-100 shadow-sm w-[317px] h-[552px] relative'>
                                 <img className='w-full' src={pti} alt="" />
+                                <div className='bg-[#1F2B6C] h-[80px] ml-[190px] top-65 w-[80px] rounded-full flex items-center justify-center absolute'><img src={lok} alt="" /></div>
                                 <div className='p-4 mt-4'>
                                     <h1 className='text-2xl tracking-wider text-[#1F2B6C] font-semibold'>Free Checkup</h1>
                                     <p className='mt-3'>Lorem ipsum dolor sit amet consectetur, enim laborum quisquam necessitatibus ratione? Nemo omnis quam minima quisquam nostrum odit aliquid earum eum.</p>

@@ -152,7 +152,7 @@ function About() {
         </div>
       </div>
 
-      
+
       <div className='h-auto md:h-[100vh] w-full flex items-center justify-center'>
         <div className='w-[95%] md:w-[80%] mb-5 flex'>
           <div className='text-center w-full'>

@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
 import Service from './pages/Service/Service.jsx'
+import FreeService from './pages/Service/FreeService.jsx'
+import Contact from './pages/contact/Contact.jsx'
 
 
 const router = createBrowserRouter([
@@ -22,8 +24,16 @@ const router = createBrowserRouter([
         element:<About/>
       },
       {
-        path:'/Service',
+        path:'/Single Service',
         element:<Service/>
+      },
+      {
+        path:'/Free Service',
+        element:<FreeService/>
+      },
+      {
+        path:'/Contact',
+        element:<Contact/>
       },
     ]
   }

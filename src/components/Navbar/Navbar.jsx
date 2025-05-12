@@ -1,7 +1,19 @@
-import React, { useState } from 'react'
+import { useState, react } from 'react'
 import { IoIosSearch, IoMdClose, IoMdMenu } from "react-icons/io";
 import Logo from '../Logo/Logo';
 import { Link } from 'react-router-dom';
+import { DownOutlined } from '@ant-design/icons';
+import { Dropdown, Space, Typography } from 'antd';
+const items = [
+  {
+    key: '1',
+    label: <Link to="/Single Service">Single Service</Link>,
+  },
+  {
+    key: '2',
+    label: <Link to="/Free Service">Free Service</Link>,
+  }
+];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +23,7 @@ function Navbar() {
       <div className="flex items-center justify-between lg:justify-center p-4 bg-[#1F2B6C] text-white">
         {/* Hamburger icon */}
         <div className='text-2xl font-semibold block lg:hidden'>
-            <h1>MED<span className='text-[#159EEC]'>DICAL</span></h1>
+          <h1>MED<span className='text-[#159EEC]'>DICAL</span></h1>
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -21,14 +33,28 @@ function Navbar() {
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-x-24">
+        <ul className="hidden lg:flex items-center gap-x-10">
           <Link to='/'><li>Home</li></Link>
           <Link to='/About'><li>About us</li></Link>
-          <Link to='Service'><li>Services</li></Link>
+          <Dropdown
+            menu={{
+              items,
+              selectable: true,
+              defaultSelectedKeys: ['3'],
+              
+            }}
+          >
+            <Typography.Link>
+              <Space className='text-white text-[16px]'>
+                Services
+                <DownOutlined />
+              </Space>
+            </Typography.Link>
+          </Dropdown>
           <li>Doctors</li>
-          <li>Contacts</li>
+          <Link to='/Contact'><li>Contact</li></Link>
           <li>
-            <button className="bg-[#BFD2F8] font-semibold text-[#1F2B6C] flex items-center gap-2 rounded-full px-6 py-2 cursor-pointer hover:bg-[#a8c0f0] transition">
+            <button className="bg-[#BFD2F8] font-semibold text-[#1F2B6C] flex items-center gap-2 ml-69 rounded-full px-6 py-2 cursor-pointer hover:bg-[#a8c0f0] transition">
               < IoIosSearch /> Appointment
             </button>
           </li>
@@ -40,9 +66,10 @@ function Navbar() {
         <ul className="flex flex-col items-center bg-[#BFD2F8] text-[#1F2B6C] py-4 space-y-4 lg:hidden">
           <Link to='/'><li>Home</li></Link>
           <Link to='/About'><li>About us</li></Link>
-          <Link to='Service'><li>Services</li></Link>
+          <Link to='/Single Service'><li>Single Service</li></Link>
+          <Link to='/Free Service'><li>Free Service</li></Link>
           <li>Doctors</li>
-          <li>Contacts</li>
+          <Link to='/Contact'><li>Contact</li></Link>
           <li>
             <button className="text-[#BFD2F8] font-semibold bg-[#1F2B6C] flex items-center gap-2 rounded-full px-6 py-2 cursor-pointer hover:bg-[#a8c0f0] transition">
               <IoIosSearch /> Appointment

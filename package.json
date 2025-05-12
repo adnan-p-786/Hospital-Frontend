@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.6",
     "@tailwindcss/vite": "^4.1.5",
+    "antd": "^5.25.1",
     "date-fns": "^4.1.0",
     "react": "^19.1.0",
     "react-datepicker": "^8.3.0",
