@@ -24,7 +24,7 @@ function Navbar() {
         <ul className="hidden lg:flex items-center gap-x-24">
           <Link to='/'><li>Home</li></Link>
           <Link to='/About'><li>About us</li></Link>
-          <li>Services</li>
+          <Link to='Service'><li>Services</li></Link>
           <li>Doctors</li>
           <li>Contacts</li>
           <li>
@@ -40,7 +40,7 @@ function Navbar() {
         <ul className="flex flex-col items-center bg-[#BFD2F8] text-[#1F2B6C] py-4 space-y-4 lg:hidden">
           <Link to='/'><li>Home</li></Link>
           <Link to='/About'><li>About us</li></Link>
-          <li>Services</li>
+          <Link to='Service'><li>Services</li></Link>
           <li>Doctors</li>
           <li>Contacts</li>
           <li>

@@ -25,49 +25,52 @@ function About() {
         </div>
       </div>
 
-      <div className='flex flex-col md:flex-row items-center justify-center h-auto md:h-screen gap-4'>
-        <div className='w-[90%] mt-5 md:mt-0 md:w-45%'>
-          <img src={care} alt="" />
-        </div>
-        <div className='w-[90%] md:w-[55%]'>
-          <h1 className='text-[#159EEC] font-bold text-md tracking-widest uppercase'>Welcome to Appolo Hospital</h1>
-          <h1 className='text-4xl mt-2 tracking-wider text-[#1F2B6C] font-semibold'>Best Care for Your <br /> Good Health</h1>
-          <div className='grid grid-cols-2 mt-6'>
-            <div className='flex gap-4'>
-              <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
-              <h1 className='text:md md:text-xl'>A Passion for Healing</h1>
-            </div>
-            <div className='flex gap-4'>
-              <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
-              <h1 className='text:md md:text-xl'>5-Star Care</h1>
-            </div>
-            <div className='flex gap-4 mt-4'>
-              <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
-              <h1 className='text:md md:text-xl'>5-Star Care</h1>
-            </div>
-            <div className='flex gap-4 mt-4'>
-              <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
-              <h1 className='text:md md:text-xl'>5-Star Care</h1>
-            </div>
-            <div className='flex gap-4 mt-4'>
-              <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
-              <h1 className='text:md md:text-xl'>5-Star Care</h1>
-            </div>
-            <div className='flex gap-4 mt-4'>
-              <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
-              <h1 className='text:md md:text-xl'>5-Star Care</h1>
-            </div>
+      <div className='flex  w-full items-center justify-center h-auto md:h-screen gap-4'>
+        <div className='h-auto md:h-screen w-[90%] md:w-[80%] md:flex-row flex-col flex'>
+          <div className='w-[90%] mt-5 md:mt-5 md:w-[45%]'>
+            <img src={care} alt="" />
           </div>
-          <p className='mt-4 md:mt-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta recusandae asperiores porro suscipit aliquid qui molestiae nam quasi excepturi fugit ex incidunt explicabo maxime veritatis, modi ea repudiandae quod tempora.</p>
-          <p className='mt-4 pb-4 md:pb-0 md:mt-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta recusandae asperiores porro suscipit aliquid qui molestiae nam quasi excepturi fugit ex incidunt explicabo maxime veritatis, modi ea repudiandae quod tempora.</p>
+          <div className='w-[90%] md:w-[55%] mt-5 md:mt-5'>
+            <h1 className='text-[#159EEC] font-bold text-md tracking-widest uppercase'>Welcome to Appolo Hospital</h1>
+            <h1 className='text-4xl mt-2 tracking-wider text-[#1F2B6C] font-semibold'>Best Care for Your <br /> Good Health</h1>
+            <div className='grid grid-cols-1 md:grid-cols-2 mt-6'>
+              <div className='flex gap-4'>
+                <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
+                <h1 className='text:md md:text-xl'>A Passion for Healing</h1>
+              </div>
+              <div className='flex gap-4 mt-4'>
+                <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
+                <h1 className='text:md md:text-xl'>5-Star Care</h1>
+              </div>
+              <div className='flex gap-4 mt-4'>
+                <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
+                <h1 className='text:md md:text-xl'>All our best</h1>
+              </div>
+              <div className='flex gap-4 mt-4'>
+                <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
+                <h1 className='text:md md:text-xl'>Believe in Us</h1>
+              </div>
+              <div className='flex gap-4 mt-4'>
+                <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
+                <h1 className='text:md md:text-xl'>Always Caring</h1>
+              </div>
+              <div className='flex gap-4 mt-4'>
+                <div className='w-[20px] h-[20px] bg-[#159EEC] rounded-full mt-1'></div>
+                <h1 className='text:md md:text-xl'>A Legacy of Excellence</h1>
+              </div>
+            </div>
+            <p className='mt-4 md:mt-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta recusandae asperiores porro suscipit aliquid qui molestiae nam quasi excepturi fugit ex incidunt explicabo maxime veritatis, modi ea repudiandae quod tempora.</p>
+            <p className='mt-4 pb-4 md:pb-0 md:mt-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta recusandae asperiores porro suscipit aliquid qui molestiae nam quasi excepturi fugit ex incidunt explicabo maxime veritatis, modi ea repudiandae quod tempora.</p>
+          </div>
         </div>
+
       </div>
 
-      {/* <div
-        className="w-full h-[444px] bg-cover bg-no-repeat bg-center flex items-center justify-center"
+      <div
+        className="w-full h-[400px] md:h-[444px] bg-cover bg-no-repeat bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${doctor})` }}
       >
-        <div className="w-[50%] text-center text-white text-2xl flex justify-center items-center">
+        <div className="w-[50%] text-center text-white text-md md:text-2xl flex justify-center items-center">
           <div className="flex flex-col items-center">
             <img src={coma} alt="" className="mb-10 text-[100px]" />
             <p className='mb-10'>
@@ -85,16 +88,16 @@ function About() {
           </div>
 
         </div>
-      </div> */}
+      </div>
 
-      {/* <div className='h-[900px] w-full flex items-center justify-center'>
-        <div className='w-[95%] md:w-[70%] h-[700px] flex'>
-          <div className='text-center w-full mt-15'>
+      <div className='h-auto md:h-screen w-full flex items-center justify-center'>
+        <div className='w-[95%] md:w-[70%] flex'>
+          <div className='text-center w-full mt-5 md:mt-15'>
             <h1 className='text-[#159EEC] font-bold text-xl tracking-widest uppercase'>trusted care</h1>
             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Our Doctors</h1>
-            <div className="mt-13">
+            <div className="mt-4 md:mt-13">
 
-              <div className="block md:hidden">
+              <div className="block md:hidden h-[600px] md:mb-5">
                 <Swiper
                   modules={[Pagination]}
                   spaceBetween={20}
@@ -147,11 +150,11 @@ function About() {
 
           </div>
         </div>
-      </div> */}
+      </div>
 
-      {/* 
-      <div className='h-[100vh] w-full flex items-center justify-center'>
-        <div className='w-[95%] md:w-[80%] h-[50vh] flex'>
+      
+      <div className='h-auto md:h-[100vh] w-full flex items-center justify-center'>
+        <div className='w-[95%] md:w-[80%] mb-5 flex'>
           <div className='text-center w-full'>
             <h1 className='text-[#159EEC] font-bold text-xl tracking-widest uppercase'>Get in Touch</h1>
             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Contact</h1>
@@ -191,7 +194,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
     </div>
   )
