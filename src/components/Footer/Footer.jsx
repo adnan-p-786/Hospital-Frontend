@@ -1,12 +1,13 @@
 import React from 'react'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
     <div className="bg-[#1F2B6C] w-full py-10 px-4 sm:px-6 lg:px-20 text-white">
       <div className="max-w-7xl mx-auto flex flex-col space-y-10">
         {/* Top grid */}
-        <div className="grid grid-cols-1 text-center md:grid-cols-3 gap-8 border-b border-gray-400 pb-10">
+        <div className="grid grid-cols-1 text-center md:grid-cols-3 gap-8 border-b border-gray-400 pb-10 md:text-left">
           <div>
             <h1 className="uppercase text-4xl text-[#BFD2F8] font-bold">meddical</h1>
             <p className="mt-4 text-sm leading-relaxed">
@@ -17,11 +18,12 @@ function Footer() {
 
           <div>
             <h2 className="text-lg font-semibold mb-4">Important Links</h2>
-            <ul className="space-y-2 text-sm">
-              <li>Appointment</li>
-              <li>Doctors</li>
-              <li>Services</li>
-              <li>About us</li>
+            <ul className="space-y-2 text-sm cursor-pointer">
+             <Link to ='/Appointment'><li>Appointment</li></Link>
+             <Link to ='/Doctors'><li>Doctors</li></Link>
+             <Link to ='/About'><li>About us</li></Link>
+             <Link to ='/Free Service'><li>Free Service</li></Link>
+             <Link to ='/Single Service'><li>Single Service</li></Link>
             </ul>
           </div>
 

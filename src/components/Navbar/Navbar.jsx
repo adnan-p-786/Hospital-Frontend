@@ -41,7 +41,7 @@ function Navbar() {
               items,
               selectable: true,
               defaultSelectedKeys: ['3'],
-              
+
             }}
           >
             <Typography.Link>
@@ -51,13 +51,15 @@ function Navbar() {
               </Space>
             </Typography.Link>
           </Dropdown>
-          <li>Doctors</li>
           <Link to='/Contact'><li>Contact</li></Link>
-          <li>
-            <button className="bg-[#BFD2F8] font-semibold text-[#1F2B6C] flex items-center gap-2 ml-69 rounded-full px-6 py-2 cursor-pointer hover:bg-[#a8c0f0] transition">
-              < IoIosSearch /> Appointment
-            </button>
-          </li>
+          <Link to='/Doctors'><li>Doctors</li></Link>
+          <Link to="/Appointment">
+            <li>
+              <button className="text-[#BFD2F8] font-semibold bg-[#1F2B6C] flex items-center gap-2 rounded-full px-6 py-2 cursor-pointer hover:text-[#1F2B6C] hover:bg-[#a8c0f0] transition">
+                <IoIosSearch /> Appointment
+              </button>
+            </li>
+          </Link>
         </ul>
       </div>
 
@@ -68,13 +70,15 @@ function Navbar() {
           <Link to='/About'><li>About us</li></Link>
           <Link to='/Single Service'><li>Single Service</li></Link>
           <Link to='/Free Service'><li>Free Service</li></Link>
-          <li>Doctors</li>
+          <Link to='/Doctors'><li>Doctors</li></Link>
           <Link to='/Contact'><li>Contact</li></Link>
-          <li>
-            <button className="text-[#BFD2F8] font-semibold bg-[#1F2B6C] flex items-center gap-2 rounded-full px-6 py-2 cursor-pointer hover:bg-[#a8c0f0] transition">
-              <IoIosSearch /> Appointment
-            </button>
-          </li>
+          <Link to="/Appointment">
+            <li>
+              <button className="text-[#BFD2F8] font-semibold bg-[#1F2B6C] flex items-center gap-2 rounded-full px-6 py-2 cursor-pointer hover:bg-[#a8c0f0] transition">
+                <IoIosSearch /> Appointment
+              </button>
+            </li>
+          </Link>
         </ul>
       )}
     </div>

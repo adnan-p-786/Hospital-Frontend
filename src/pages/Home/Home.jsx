@@ -79,17 +79,40 @@ function Home() {
             <h1 className='text-[#159EEC] font-bold text-xl tracking-widest uppercase'>Care you can believe in</h1>
             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Our Services</h1>
             <div className="grid grid-cols-3 mt-8 w-full gap-2">
-              <div className='bg-amber-100 h-full w-full p-4 '>
-                <img src={medical} alt="" />
-                <p>Free Checkup</p>
+              <div className='px-25 border-2 border-gray-200'>
+                <div>
+                  <div className='flex items-center justify-center'>
+                    <img className='text-center' src={medical} alt="" />
+                  </div>
+                  <p>Free Checkup</p>
+                </div>
+                <div className='bg-[#1F2B6C]'>
+                  <div className='flex items-center justify-center mt-4'>
+                    <img className='text-center' src={medical} alt="" />
+                  </div>
+                  <p className='text-white'>Cardiogram</p>
+                </div>
+                <div>
+                  <div className='flex items-center justify-center'>
+                    <img className='text-center' src={medical} alt="" />
+                  </div>
+                  <p>Free Checkup</p>
+                </div>
+                <div>
+                  <div className='flex items-center justify-center'>
+                    <img className='text-center' src={medical} alt="" />
+                  </div>
+                  <p>Free Checkup</p>
+                </div>
+                <div>
+                  <div className='flex items-center justify-center'>
+                    <img className='text-center' src={medical} alt="" />
+                  </div>
+                  <p>Free Checkup</p>
+                </div>
+
               </div>
-              <div className='bg-amber-100 h-full w-full items-center justify-center flex'>
-                <img src={medical} alt="" />
-                <p>Free Checkup</p>
-              </div>
-              <div className='bg-amber-100 h-full w-full'>
-                sss
-              </div>
+
             </div>
           </div>
         </div>
@@ -140,7 +163,7 @@ function Home() {
                   <input type="email" placeholder="Email" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
                   <input type="tel" placeholder="Phone" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
 
-                  <input type="text" placeholder="dd/mm/yyyy" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
+                  <input type="date" placeholder="dd-mm-yyyy" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
                   <select className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
                     <option>Time</option>
                     <option>9:00 AM</option>
@@ -243,9 +266,9 @@ function Home() {
                 <div className='flex'>
                   <img src={news} alt="" />
                   <div className='p-5 w-[300px]'>
-                  <p className='text-[#159EEC] text-sm'>Monday 05, September 2021 | By Author</p>
-                  <h1 className='text-md text-left mt-1'>This Article’s Title goes Here, 
-                  but not too long.</h1>
+                    <p className='text-[#159EEC] text-sm'>Monday 05, September 2021 | By Author</p>
+                    <h1 className='text-md text-left mt-1'>This Article’s Title goes Here,
+                      but not too long.</h1>
                   </div>
                 </div>
               </div>
@@ -253,9 +276,9 @@ function Home() {
                 <div className='flex'>
                   <img src={news} alt="" />
                   <div className='p-5 w-[300px]'>
-                  <p className='text-[#159EEC] text-sm'>Monday 05, September 2021 | By Author</p>
-                  <h1 className='text-md text-left mt-1'>This Article’s Title goes Here, 
-                  but not too long.</h1>
+                    <p className='text-[#159EEC] text-sm'>Monday 05, September 2021 | By Author</p>
+                    <h1 className='text-md text-left mt-1'>This Article’s Title goes Here,
+                      but not too long.</h1>
                   </div>
                 </div>
               </div>
@@ -263,9 +286,9 @@ function Home() {
                 <div className='flex'>
                   <img src={news} alt="" />
                   <div className='p-5 w-[300px]'>
-                  <p className='text-[#159EEC] text-sm'>Monday 05, September 2021 | By Author</p>
-                  <h1 className='text-md text-left mt-1'>This Article’s Title goes Here, 
-                  but not too long.</h1>
+                    <p className='text-[#159EEC] text-sm'>Monday 05, September 2021 | By Author</p>
+                    <h1 className='text-md text-left mt-1'>This Article’s Title goes Here,
+                      but not too long.</h1>
                   </div>
                 </div>
               </div>
@@ -273,9 +296,9 @@ function Home() {
                 <div className='flex'>
                   <img src={news} alt="" />
                   <div className='p-5 w-[300px]'>
-                  <p className='text-[#159EEC] text-sm'>Monday 05, September 2021 | By Author</p>
-                  <h1 className='text-md text-left mt-1'>This Article’s Title goes Here, 
-                  but not too long.</h1>
+                    <p className='text-[#159EEC] text-sm'>Monday 05, September 2021 | By Author</p>
+                    <h1 className='text-md text-left mt-1'>This Article’s Title goes Here,
+                      but not too long.</h1>
                   </div>
                 </div>
               </div>

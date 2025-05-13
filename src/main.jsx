@@ -8,6 +8,8 @@ import About from './pages/About/About.jsx'
 import Service from './pages/Service/Service.jsx'
 import FreeService from './pages/Service/FreeService.jsx'
 import Contact from './pages/contact/Contact.jsx'
+import Appointment from './pages/Appointment/Appointment.jsx'
+import Doctor from './pages/Doctors/Doctor.jsx'
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path:'/Contact',
         element:<Contact/>
+      },
+      {
+        path:'/Appointment',
+        element:<Appointment/>
+      },
+      {
+        path:'/Doctors',
+        element:<Doctor/>
       },
     ]
   }
