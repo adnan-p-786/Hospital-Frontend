@@ -19,6 +19,8 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import pti from '../../assets/pti.png'
+import three from '../../assets/three.png'
 
 import { Pagination } from 'swiper/modules';
 
@@ -73,50 +75,83 @@ function Home() {
         </div>
       </div>
 
-      <div className='h-screen w-full flex items-center justify-center'>
-        <div className='w-[80%] h-screen flex mt-20'>
-          <div className='text-center w-full '>
-            <h1 className='text-[#159EEC] font-bold text-xl tracking-widest uppercase'>Care you can believe in</h1>
-            <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Our Services</h1>
-            <div className="grid grid-cols-3 mt-8 w-full gap-2">
-              <div className='px-25 border-2 border-gray-200'>
-                <div>
-                  <div className='flex items-center justify-center'>
-                    <img className='text-center' src={medical} alt="" />
-                  </div>
-                  <p>Free Checkup</p>
-                </div>
-                <div className='bg-[#1F2B6C]'>
-                  <div className='flex items-center justify-center mt-4'>
-                    <img className='text-center' src={medical} alt="" />
-                  </div>
-                  <p className='text-white'>Cardiogram</p>
-                </div>
-                <div>
-                  <div className='flex items-center justify-center'>
-                    <img className='text-center' src={medical} alt="" />
-                  </div>
-                  <p>Free Checkup</p>
-                </div>
-                <div>
-                  <div className='flex items-center justify-center'>
-                    <img className='text-center' src={medical} alt="" />
-                  </div>
-                  <p>Free Checkup</p>
-                </div>
-                <div>
-                  <div className='flex items-center justify-center'>
-                    <img className='text-center' src={medical} alt="" />
-                  </div>
-                  <p>Free Checkup</p>
-                </div>
+      <div className="w-full min-h-screen flex items-center justify-center">
+        <div className="w-full md:w-[80%] max-w-screen-xl px-4 mt-20">
+          <div className="text-center w-full">
+            <h1 className="text-[#159EEC] font-bold text-lg md:text-xl tracking-widest uppercase">
+              Care you can believe in
+            </h1>
+            <h1 className="text-2xl md:text-3xl tracking-wider text-[#1F2B6C] font-semibold mt-2">
+              Our Services
+            </h1>
 
+            <div className="flex flex-col md:flex-row mt-10 w-full gap-8">
+              {/* LEFT SIDE SERVICES LIST */}
+              <div className="w-full md:w-1/5 border-2 border-gray-200 flex flex-col">
+                <div className="py-5 flex flex-col items-center">
+                  <img src={medical} alt="" />
+                  <p className="mt-2">Free Checkup</p>
+                </div>
+                <div className="bg-[#1F2B6C] py-5 flex flex-col items-center text-white">
+                  <img src={medical} alt="" className="mt-4" />
+                  <p className="mt-2">Cardiogram</p>
+                </div>
+                <div className="py-5 flex flex-col items-center">
+                  <img src={medical} alt="" />
+                  <p className="mt-2">Free Checkup</p>
+                </div>
+                <div className="py-5 flex flex-col items-center">
+                  <img src={medical} alt="" />
+                  <p className="mt-2">Free Checkup</p>
+                </div>
+                <div className="py-5 flex flex-col items-center">
+                  <img src={medical} alt="" />
+                  <p className="mt-2">Free Checkup</p>
+                </div>
               </div>
 
+              {/* CENTER SECTION */}
+              <div className="w-full md:w-1/2">
+                <h1 className="text-left text-xl md:text-3xl font-semibold">
+                  A passion for putting patients first.
+                </h1>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  {[
+                    "A Passion for Healing",
+                    "5-Star Care",
+                    "All our best",
+                    "Believe in Us",
+                    "Always Caring",
+                    "A Legacy of Excellence",
+                  ].map((item, index) => (
+                    <div className="flex items-start gap-3" key={index}>
+                      <div className="w-4 h-4 bg-[#159EEC] rounded-full mt-1"></div>
+                      <h2 className="text-base md:text-lg">{item}</h2>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-left mt-6 text-sm md:text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ad eaque atque minus corrupti possimus
+                  facilis, voluptatem obcaecati excepturi delectus, quos animi. Accusamus eos ex quod sed non delectus architecto.
+                </p>
+                <p className="text-left mt-6 text-sm md:text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ad eaque atque minus corrupti possimus
+                  facilis, voluptatem obcaecati excepturi delectus, quos animi. Accusamus eos ex quod sed non delectus architecto.
+                </p>
+              </div>
+
+              {/* RIGHT SIDE IMAGES */}
+              <div className="w-full md:w-1/4 flex flex-col items-center">
+                <img src={pti} alt="" />
+                <img className="mt-4" src={three} alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
+
 
       <div className='h-auto md:h-screen w-full flex items-center justify-center'>
         <div className='w-[98%] md:w-[80%] h-screen flex'>
@@ -256,7 +291,7 @@ function Home() {
         </div>
       </div>
 
-      <div className='h-auto md:h-screen w-full flex items-center justify-center'>
+      <div className='md:h-screen min-h-screen w-full flex items-center justify-center'>
         <div className='w-[95%] md:w-[80%] h-screen flex pt-5 md:pt-20'>
           <div className='text-center w-full'>
             <h1 className='text-[#159EEC] font-bold text-xl tracking-widest uppercase'>Better information, Better health</h1>

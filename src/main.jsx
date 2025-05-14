@@ -10,6 +10,8 @@ import FreeService from './pages/Service/FreeService.jsx'
 import Contact from './pages/contact/Contact.jsx'
 import Appointment from './pages/Appointment/Appointment.jsx'
 import Doctor from './pages/Doctors/Doctor.jsx'
+import store from './App/store.js'
+import { Provider } from 'react-redux'
 
 
 const router = createBrowserRouter([
@@ -54,6 +56,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <Provider store={store}>
+      <RouterProvider router={router}/>
+    </Provider>
   </StrictMode>,
 )
