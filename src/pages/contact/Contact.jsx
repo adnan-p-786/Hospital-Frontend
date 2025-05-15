@@ -1,12 +1,33 @@
 import React from 'react'
 import contact from '../../assets/contact.png'
-import map from '../../assets/Mapview.png'
 import { GoClock } from 'react-icons/go'
 import { MdOutlineMailOutline } from 'react-icons/md'
 import { CiLocationOn } from 'react-icons/ci'
 import { PiPhoneCallLight } from 'react-icons/pi'
+import { useCreateContact } from '../../Api/Contact/contactHooks'
 
 function Contact() {
+
+    const { mutate: Create } = useCreateContact()
+    
+        const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        const formData = new FormData(e.target);
+        const value = Object.fromEntries(formData.entries());
+    
+        Create(value, {
+            onSuccess: () => {
+                e.target.reset();
+                 alert("contact created successfully!");
+            },
+            onError: () => {
+                alert("Failed to create contact."); 
+            },
+        });
+    };
+
+
     return (
         <div>
             <div className="w-full h-[250px] bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${contact})`, }}>
@@ -26,13 +47,13 @@ function Contact() {
                     <div className='w-full md:w-[50%] rounded-sm'>
                         <h1 className='text-[#159EEC] tracking-[3px] font-bold uppercase'>get in touch</h1>
                         <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Contact</h1>
-                        <form className="mt-7 rounded-md">
+                        <form onSubmit={handleSubmit} className="mt-7 rounded-md">
                             <div className="grid grid-cols-2">
-                                <input type="text" placeholder="Name" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white text-white" />
-                                <input type="email" placeholder="Email" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white text-white" />
+                                <input name='Name' type="text" placeholder="Name" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white text-white" />
+                                <input name='Email' type="email" placeholder="Email" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white text-white" />
                             </div>
-                            <input type="text" placeholder="Subject" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white w-full text-white" />
-                            <textarea placeholder="Message" rows="10" className="w-full p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white text-white"></textarea>
+                            <input name='Subject' type="text" placeholder="Subject" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white w-full text-white" />
+                            <textarea name='Message' placeholder="Message" rows="10" className="w-full p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white text-white"></textarea>
                             <button type="submit" className="w-full bg-[#b3c9f7] text-[#1b2364] font-semibold py-2 rounded">
                                 SUBMIT
                             </button>

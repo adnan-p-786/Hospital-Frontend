@@ -1,7 +1,34 @@
-import React from 'react'
+
 import appoint from '../../assets/appointment.png'
 import { PiPhoneCallLight } from 'react-icons/pi'
+import { useCreateAppointment } from '../../Api/Appointment/appointmentHook'
+import { useQuery } from 'react-query'
+import { getAppointment } from '../../Api/Appointment/appointmentApi'
+
 function Appointment() {
+    // const {data} =useQuery("getdata", getAppointment)
+    
+    const { mutate: Create } = useCreateAppointment()
+
+    const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const value = Object.fromEntries(formData.entries());
+
+    Create(value, {
+        onSuccess: () => {
+            e.target.reset();
+             alert("Appointment created successfully!");
+        },
+        onError: () => {
+            alert("Failed to create appointment."); 
+        },
+    });
+};
+
+
+
     return (
         <div>
             <div className="w-full h-[250px] bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${appoint})`, }}>
@@ -17,39 +44,39 @@ function Appointment() {
                             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>Book an Appointment</h1>
                             <p className='mt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam consectetur minima a aspernatur? Beatae nostrum dolores iure debitis enim odit odio alias cum totam, maiores harum possimus? Iste, obcaecati neque!</p>
                             <div className="max-w-xl mx-auto p-4 mt-15 bg-[#1b2364] rounded-md text-white">
-                                <form className="space-y-4 ">
+                                <form onSubmit={handleSubmit} className="space-y-4 ">
                                     <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
-                                        <input type="text" placeholder="Name" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
-                                        <select className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
+                                        <input name='Name' type="text" placeholder="Name" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
+                                        <select name='Gender' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
                                             <option>Gender</option>
                                             <option>Male</option>
                                             <option>Female</option>
                                         </select>
 
-                                        <input type="email" placeholder="Email" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
-                                        <input type="tel" placeholder="Phone" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
+                                        <input name='Email' type="email" placeholder="Email" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
+                                        <input name='Phone' type="tel" placeholder="Phone" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
 
-                                        <input type="date" placeholder="dd-mm-yyyy" className="p-2 rounded bg-[#1b2364] border text-white border-gray-300 placeholder-white" />
-                                        <select className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
+                                        <input name='Date' type="date" placeholder="dd-mm-yyyy" className="p-2 rounded bg-[#1b2364] border text-white border-gray-300 placeholder-white" />
+                                        <select name='Time' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
                                             <option>Time</option>
                                             <option>9:00 AM</option>
                                             <option>11:00 AM</option>
                                             <option>1:00 PM</option>
                                         </select>
 
-                                        <select className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
+                                        <select name='Doctor' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
                                             <option>Doctor</option>
                                             <option>Dr. Smith</option>
                                             <option>Dr. Jane</option>
                                         </select>
-                                        <select className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
+                                        <select name='Department' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
                                             <option>Department</option>
                                             <option>Cardiology</option>
                                             <option>Neurology</option>
                                         </select>
                                     </div>
 
-                                    <textarea placeholder="Message" rows="4" className="w-full p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white"></textarea>
+                                    <textarea name='Message' placeholder="Message" rows="4" className="w-full p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white"></textarea>
 
                                     <button type="submit" className="w-full bg-[#b3c9f7] text-[#1b2364] font-semibold py-2 rounded">
                                         SUBMIT

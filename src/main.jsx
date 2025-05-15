@@ -12,6 +12,7 @@ import Appointment from './pages/Appointment/Appointment.jsx'
 import Doctor from './pages/Doctors/Doctor.jsx'
 import store from './App/store.js'
 import { Provider } from 'react-redux'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 
 const router = createBrowserRouter([
@@ -52,12 +53,15 @@ const router = createBrowserRouter([
 ])
 
 
+const queryClient = new QueryClient
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Provider store={store}>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
       <RouterProvider router={router}/>
     </Provider>
+    </QueryClientProvider>
   </StrictMode>,
 )
