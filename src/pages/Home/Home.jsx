@@ -23,6 +23,7 @@ import pti from '../../assets/pti.png'
 import three from '../../assets/three.png'
 
 import { Pagination } from 'swiper/modules';
+import { Link } from 'react-router-dom'
 
 const categories = [
   "Neurology", "Bones", "Oncology", "Otorhinolaryngology",
@@ -48,9 +49,12 @@ function Home() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl text-[#1F2B6C] tracking-wide leading-tight mt-2">
               Leading the Way <br className="hidden md:block" /> in Medical Excellence
             </h1>
-            <button className="text-[#1F2B6C] font-semibold bg-[#BFD2F8] mt-5 px-6 sm:px-7 py-2 sm:py-2.5 rounded-full">
+            <Link to='/Single Service'>
+             <button className="text-[#1F2B6C] cursor-pointer font-semibold bg-[#BFD2F8] mt-5 px-6 sm:px-7 py-2 sm:py-2.5 rounded-full">
               Our Services
             </button>
+            </Link>
+           
           </div>
         </div>
       </div>
@@ -62,12 +66,14 @@ function Home() {
             <h1 className='text-[#159EEC] tracking-[3px] font-bold'>WELCOME TO MEDDICAL</h1>
             <h1 className='text-3xl tracking-wider text-[#1F2B6C] font-semibold'>A Great Place to Receive Care</h1>
             <p className='mt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit.njldknjeklne enknekone kneknek Cumque vero facilis <br /> doloribus nostrum accusamus vel incidunt, esse eum fugit illum, brminus quos porro at impedit totam repellat cupiditate expedita. Ratione.</p>
+            <Link to='/About'>
             <a class="text-[#159EEC] mt-5 inline-flex items-center cursor-pointer">Learn More
               <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
             </a>
+            </Link>
             <div className='mt-7 md:mt-15 '>
               <img src={image} alt="" />
             </div>

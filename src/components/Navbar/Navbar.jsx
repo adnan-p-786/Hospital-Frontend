@@ -39,21 +39,21 @@ function Navbar() {
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-x-10">
-          <Link to='/'><li>Home</li></Link>
-          <Link to='/About'><li>About us</li></Link>
+        <ul className="hidden lg:flex items-center gap-x-10 ">
+          <Link to='/'><li className='hover:text-[#159EEC] hover:underline'>Home</li></Link>
+          <Link to='/About'><li className='hover:text-[#159EEC] hover:underline'>About us</li></Link>
           <Dropdown
             menu={{ items, selectable: true, defaultSelectedKeys: ['3'] }}
           >
             <Typography.Link>
-              <Space className='text-white text-[16px]'>
+              <Space className='text-white text-[16px] hover:text-[#159EEC] hover:underline'>
                 Services
                 <DownOutlined />
               </Space>
             </Typography.Link>
           </Dropdown>
-          <Link to='/Contact'><li>Contact</li></Link>
-          <Link to='/Doctors'><li>Doctors</li></Link>
+          <Link to='/Contact'><li className='hover:text-[#159EEC] hover:underline'>Contact</li></Link>
+          <Link to='/Doctors'><li className='hover:text-[#159EEC] hover:underline'>Doctors</li></Link>
           <Link to="/Appointment">
             <li>
               <button className="text-[#BFD2F8] font-semibold bg-[#1F2B6C] flex items-center gap-2 rounded-full px-6 py-2 cursor-pointer hover:text-[#1F2B6C] hover:bg-[#a8c0f0] transition">
