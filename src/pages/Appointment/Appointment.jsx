@@ -2,12 +2,9 @@
 import appoint from '../../assets/appointment.png'
 import { PiPhoneCallLight } from 'react-icons/pi'
 import { useCreateAppointment } from '../../Api/Appointment/appointmentHook'
-import { useQuery } from 'react-query'
-import { getAppointment } from '../../Api/Appointment/appointmentApi'
+
 
 function Appointment() {
-    // const {data} =useQuery("getdata", getAppointment)
-    
     const { mutate: Create } = useCreateAppointment()
 
     const handleSubmit = (e) => {
