@@ -6,9 +6,9 @@ function Logo() {
     return (
         <div className="w-full flex flex-wrap md:flex-nowrap items-center justify-center gap-6 md:gap-30 p-4 md:p-4">
             {/* Logo Section */}
-            <div className="text-2xl font-semibold hidden lg:block">
+            <div className="text-3xl font-semibold hidden lg:block">
                 <h1>
-                    MED<span className="text-[#159EEC]">DICAL</span>
+                    AP0<span className="text-[#159EEC]">LLO</span>
                 </h1>
             </div>
 
