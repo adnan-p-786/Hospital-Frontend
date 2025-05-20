@@ -7,30 +7,33 @@ import { MdOutlineMailOutline } from 'react-icons/md'
 import { CiLocationOn } from 'react-icons/ci'
 import { PiPhoneCallLight } from 'react-icons/pi'
 import news from '../../assets/rectangle 34.png';
-import jen from '../../assets/1.png'
-import jon from '../../assets/2.png'
-import jeen from '../../assets/3.png'
+// import jen from '../../assets/1.png'
+// import jon from '../../assets/2.png'
+// import jeen from '../../assets/3.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { getDoctor } from '../../../../Admin/src/Apis/Doctor/doctorApi'
+import { useQuery } from 'react-query';
 
-const menu = [
-  {
-    name: "Dr John",
-    Department: "neurology",
-    image: jen
-  },
-  {
-    name: "Dr Thomas",
-    Department: "orthopedic",
-    image: jon
-  },
-  {
-    name: "Dr Arun",
-    Department: "Dentologist",
-    image: jeen
-  },
-]
+// const menu = [
+//   {
+//     name: "Dr John",
+//     Department: "neurology",
+//     image: jen
+//   },
+//   {
+//     name: "Dr Thomas",
+//     Department: "orthopedic",
+//     image: jon
+//   },
+//   {
+//     name: "Dr Arun",
+//     Department: "Dentologist",
+//     image: jeen
+//   },
+// ]
 
 function Doctor() {
+  const { data } = useQuery('getDoctor', getDoctor)
   return (
     <div>
       <div className="w-full h-[250px] bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${about})`, }}>
@@ -39,15 +42,15 @@ function Doctor() {
         </div>
       </div>
 
-      <div className='min-h-screen md:h-screen w-full flex items-center justify-center'>
+      <div className='min-h-screen md:h-auto w-full flex items-center justify-center'>
         <div className="w-[80%]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {menu.map((item) => (
-              <div key={item} className='h-[526px] w-[300px] mx-auto rounded'>
-                <img className='w-[317px] h-[350px]' src={item.image} alt="" />
+            {data && data.data.map((doctor) => (
+              <div key={doctor._id} className='h-[526px] w-[300px] mx-auto rounded'>
+                <img className='w-[317px] h-[350px]' src={doctor.image} alt={doctor.Name} />
                 <div className='bg-[#BFD2F8] h-[142px] text-[#1F2B6C]'>
-                  <h1 className='pt-6 tracking-wider text-center'>{item.name}</h1>
-                  <h1 className='uppercase font-bold tracking-widest text-center'>{item.Department}</h1>
+                  <h1 className='pt-6 tracking-wider text-center'>{doctor.Name}</h1>
+                  <h1 className='uppercase font-bold tracking-widest text-center'>{doctor.Department}</h1>
                   <div className='flex items-center justify-center gap-6 mt-4'>
                     <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full flex items-center justify-center cursor-pointer'><FaLinkedinIn /></div>
                     <div className='w-[26px] h-[26px] text-[#BFD2F8] bg-[#1F2B6C] rounded-full flex items-center justify-center cursor-pointer'><FaFacebookF /></div>
@@ -58,10 +61,7 @@ function Doctor() {
                   </div>
                 </div>
               </div>
-
-            )
-
-            )}
+            ))}
 
           </div>
         </div>
