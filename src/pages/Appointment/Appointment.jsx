@@ -63,13 +63,17 @@ function Appointment() {
 
                                         <select name='Doctor' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
                                             <option>Doctor</option>
-                                            <option>Dr. Smith</option>
-                                            <option>Dr. Jane</option>
+                                            <option>Dr Smith</option>
+                                            <option>Dr Jane</option>
+                                            <option>Dr Fazeela</option>
                                         </select>
                                         <select name='Department' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
                                             <option>Department</option>
                                             <option>Cardiology</option>
                                             <option>Neurology</option>
+                                            <option>Orthpeadic</option>
+                                            <option>Phycology</option>
+                                            <option>Dentologist</option>
                                         </select>
                                     </div>
 
