@@ -2,27 +2,31 @@
 import appoint from '../../assets/appointment.png'
 import { PiPhoneCallLight } from 'react-icons/pi'
 import { useCreateAppointment } from '../../Api/Appointment/appointmentHook'
-
+import { getDoctor } from '../../Api/Doctor/doctorApi'
+import { useQuery } from 'react-query';
+import { getDepartment } from '../../Api/Department/department';
 
 function Appointment() {
     const { mutate: Create } = useCreateAppointment()
+    const { data: doctordata } = useQuery('getDoctor', getDoctor)
+    const { data: departmentdata } = useQuery('getDepartment', getDepartment)
 
     const handleSubmit = (e) => {
-    e.preventDefault();
+        e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const value = Object.fromEntries(formData.entries());
+        const formData = new FormData(e.target);
+        const value = Object.fromEntries(formData.entries());
 
-    Create(value, {
-        onSuccess: () => {
-            e.target.reset();
-             alert("Appointment created successfully!");
-        },
-        onError: () => {
-            alert("Failed to create appointment."); 
-        },
-    });
-};
+        Create(value, {
+            onSuccess: () => {
+                e.target.reset();
+                alert("Appointment created successfully!");
+            },
+            onError: () => {
+                alert("Failed to create appointment.");
+            },
+        });
+    };
 
 
 
@@ -45,7 +49,6 @@ function Appointment() {
                                     <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
                                         <input name='Name' type="text" placeholder="Name" className="p-2 rounded bg-[#1b2364] border border-gray-300 placeholder-white" />
                                         <select name='Gender' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
-                                            <option>Gender</option>
                                             <option>Male</option>
                                             <option>Female</option>
                                         </select>
@@ -61,19 +64,22 @@ function Appointment() {
                                             <option>1:00 PM</option>
                                         </select>
 
-                                        <select name='Doctor' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
-                                            <option>Doctor</option>
-                                            <option>Dr Smith</option>
-                                            <option>Dr Jane</option>
-                                            <option>Dr Fazeela</option>
+                                        <select name='DoctorId' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white" required>
+                                            {doctordata?.data?.map((doctor) => (
+                                                <option key={doctor._id} value={doctor._id}>
+                                                  {doctor.Name}
+                                                </option>
+                                            ))}
+
                                         </select>
-                                        <select name='Department' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white">
-                                            <option>Department</option>
-                                            <option>Cardiology</option>
-                                            <option>Neurology</option>
-                                            <option>Orthpeadic</option>
-                                            <option>Phycology</option>
-                                            <option>Dentologist</option>
+
+                                        <select name='DepartmentId' className="p-2 rounded bg-[#1b2364] border border-gray-300 text-white" required>
+                                            {departmentdata?.data?.map((department) => (
+                                                <option key={department._id} value={department._id} className='text-white'>
+                                                  {department.Name}
+                                                </option>
+                                            ))}
+
                                         </select>
                                     </div>
 
