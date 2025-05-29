@@ -44,7 +44,7 @@ function Doctor() {
 
       <div className='min-h-screen md:h-auto w-full flex items-center justify-center'>
         <div className="w-[80%]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-5">
             {data && data.data.map((doctor) => (
               <div key={doctor._id} className='h-[526px] w-[300px] mx-auto rounded'>
                 <img className='w-[317px] h-[350px]' src={doctor.image} alt={doctor.Name} />
