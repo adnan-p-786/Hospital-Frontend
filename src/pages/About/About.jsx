@@ -3,6 +3,7 @@ import about from '../../assets/Group 183.png'
 import care from '../../assets/care.png'
 import doctor from '../../assets/testimonials.png'
 import coma from '../../assets/coma.png'
+import aboutpage from '../../assets/about page.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -19,7 +20,7 @@ import { PiPhoneCallLight } from 'react-icons/pi'
 function About() {
   return (
     <div>
-      <div className="w-full h-[250px] bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${about})`, }}>
+      <div className="w-full h-[250px] bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${aboutpage})`, }}>
         <div className='ml-23 md:ml-35'>
           <h1 className='text-[#1F2B6C] text-5xl md:text-7xl pt-40 md:pt-25'>About us</h1>
         </div>

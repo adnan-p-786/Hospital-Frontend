@@ -7,30 +7,9 @@ import { MdOutlineMailOutline } from 'react-icons/md'
 import { CiLocationOn } from 'react-icons/ci'
 import { PiPhoneCallLight } from 'react-icons/pi'
 import news from '../../assets/rectangle 34.png';
-// import jen from '../../assets/1.png'
-// import jon from '../../assets/2.png'
-// import jeen from '../../assets/3.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { getDoctor } from '../../../../Admin/src/Apis/Doctor/doctorApi'
 import { useQuery } from 'react-query';
-
-// const menu = [
-//   {
-//     name: "Dr John",
-//     Department: "neurology",
-//     image: jen
-//   },
-//   {
-//     name: "Dr Thomas",
-//     Department: "orthopedic",
-//     image: jon
-//   },
-//   {
-//     name: "Dr Arun",
-//     Department: "Dentologist",
-//     image: jeen
-//   },
-// ]
 
 function Doctor() {
   const { data } = useQuery('getDoctor', getDoctor)
